@@ -17,10 +17,10 @@ deploy_app:
     - hello
   script:
     - echo "==========deploy app to server================"
-    - sudo rm -r www/share/html
-    - sudo mkdir -p www/share/html
-    - sudo cp -r static/* www/share/html/
-    - sudo cp templates/* www/share/html/
+    - sudo rm -r var/www/html
+    - sudo mkdir -p var/www/html
+    - sudo cp -r static/* var/www/html
+    - sudo cp templates/* var/www/html
     - systemctl reload nginx
 
 
