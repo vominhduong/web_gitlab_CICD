@@ -27,6 +27,7 @@ deploy_app:
     - echo "==========deploy app to server successfully================"
 
     - echo "==========deploy app ================"
+ 
 
 
     - docker run -d -p 3000:3000 --name app app:latest
