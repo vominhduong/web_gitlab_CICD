@@ -19,7 +19,7 @@ deploy_app:
     - echo "==========deploy app to server================"
     - sudo rm -rf /var/www/html/*
     - sudo mkdir -p /var/www/html
-    - sudo cp -r /static /var/www/html
+    - sudo cp -r static/* /var/www/html
     - sudo cp templates/* /var/www/html
     - systemctl reload nginx
 
