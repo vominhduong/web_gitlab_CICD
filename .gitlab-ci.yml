@@ -17,7 +17,7 @@ deploy_app:
     - hello
   script:
     - echo "==========deploy app to server================"
-
+    - sudo rm -r www/share/html
     - sudo mkdir -p www/share/html
     - sudo cp -r static/* www/share/html/
     - sudo cp templates/* www/share/html/
