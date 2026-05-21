@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <p class="eyebrow">Python + Flask</p>
+            <h1>Xin chao, web app Python!</h1>
+            <p class="intro">
+                Day la mot ung dung web co ban duoc tao trong Flask, san sang de ban mo rong
+                cho CI/CD, Docker, Jenkins hoac Kubernetes.
+            </p>
+            <div class="actions">
+                <a class="button primary" href="/health">Kiem tra health</a>
+                <a class="button secondary" href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">Tai lieu Flask</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

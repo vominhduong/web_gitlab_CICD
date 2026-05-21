@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+build_app:
+  stage: build
+  script:
+    - echo "build docker image"
+    - docker build -t app:latest .
+  only:
+    - main
+deploy_app:
+  stage: deploy
+  script:
+    - echo "==========deploy app to server================"
+
+    - sudo mkdir -p www/share/html
+    - sudo cp -r static/* www/share/html/
+    - sudo cp templates/* www/share/html/
+    - systemctl reload nginx
+
+
+    - echo "==========deploy app to server successfully================"
+
+    - echo "==========deploy app ================"
+
+
+    - docker run -d -p 3000:3000 --name app app:latest
+
+
+    - echo "==========deploy app successfully==============="
+
+    
+  only:
+    - main
+
