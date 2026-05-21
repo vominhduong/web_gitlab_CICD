@@ -28,7 +28,8 @@ deploy_app:
 
     - echo "==========deploy app ================"
  
-
+  #kill process running on port 3000
+    - sudo fuser -k 3000/tcp || true
 
     - docker run -d -p 3000:3000 --name app app:latest
 
