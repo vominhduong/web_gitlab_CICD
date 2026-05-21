@@ -4,6 +4,8 @@ stages:
 
 build_app:
   stage: build
+  tags:
+    - hello
   script:
     - echo "build docker image"
     - docker build -t app:latest .
